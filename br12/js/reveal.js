@@ -679,6 +679,8 @@ var Reveal = (function(){
 		}
 	}
 	function navigateRight() {
+/* **arno** change state to :active */		/* dom.controlsLeft. */
+
 		// Prioritize revealing fragments
 		if( overviewIsActive() || nextFragment() === false ) {
 			indexh ++;

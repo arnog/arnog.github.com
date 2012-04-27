@@ -9,12 +9,14 @@
  * FONT-FACE DEFINITIONS
  *********************************************/
 
+/* 
 @font-face {
 	font-family: 'League Gothic';
 	src: url('../assets/fonts/leaguegothic/league_gothic-webfont.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
+*/
 
 
 /*********************************************
@@ -27,10 +29,11 @@ html, body {
 	margin: 0;
 	overflow: hidden;
 	
-	font-family: 'Adobe Clean', sans-serif;
+	font-family: 'Ubuntu', 'Adobe Clean', 'Myriad Pro', 'Myriad Web Pro', sans-serif;
+
 	font-size: 36px;
 	font-weight: 200;
-	color: #eee;	
+	color: #555;	
 	width: 100%;
 	height: 100%;
 
@@ -38,11 +41,17 @@ html, body {
 }
 
 html {
-	background: #fff;
+	background: #efefef;
+
+	background: url(../assets/spotlight.png) #efefef center center no-repeat;
+	background-size: cover;
+
+/*
 	background: -webkit-linear-gradient(bottom, #EFEFEF -20%, #CFCFCF 100%);	
 	background: -moz-linear-gradient(bottom, #EFEFEF -20%, #CFCFCF 100%);
 	background: -o-linear-gradient(bottom, #EFEFEF -20%, #CFCFCF 100%);
 	background: -ms-linear-gradient(bottom, #EFEFEF -20%, #CFCFCF 100%);
+*/
 }
 
 /*********************************************
@@ -57,9 +66,9 @@ html {
 	color: #444;
 	
 	line-height: 0.9em;
-	letter-spacing: 0.02em;
+	letter-spacing: -.08em;
 	
-	text-transform: uppercase;
+/*	text-transform: uppercase; */
 }
 
 #reveal h1 { font-size: 136px; 	}
@@ -75,19 +84,74 @@ html {
 	text-shadow: 0px 0px 2px rgba(0,0,0,0.4);
 }
 
-#reveal h1 {
+#reveal .vertical-center {
+	display:	table;
+	position: 	absolute;
+	width:		100%;
+	height: 	600px;
 }
+
+#reveal .vertical-center h1.large {
+	display: 	table-cell;
+	vertical-align: middle;
+}
+
+#reveal h1.large {
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+
+	font-size: 3em;
+	position: absolute;
+	top: 50%;
+	margin-top: -25%;
+	margin-bottom:0;
+	text-align:	center;
+
+	font-weight: 700;
+	line-height: 1em;
+	
+/*	background: -webkit-linear-gradient(top, #f00 0px, #0f0 1.5em);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+*/
+/*	-webkit-mask-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0px, rgba(255, 255, 255, .5) 1.5em); */
+/*	-webkit-background-clip: text; */
+
+	-webkit-text-stroke: 1px rgba(0,0,0,.5);
+	text-shadow: 
+		1px 1px 0px rgba(255,255,255,.5), 
+		-1px -1px 0px rgba(0,0,0,.5), 
+		0px 0px 16px rgba(255,255,255,.6);
+}
+
 
 #reveal h3, 
 #reveal h4 {
-	text-transform: lowercase;
+/*	text-transform: lowercase; */
 	font-weight: 100;
 }
 
+
+#reveal .embossed {
+	line-height: 1;
+	text-shadow: 
+		1px 1px 0px rgba(255,255,255,1), 
+		-1px -1px 0px rgba(0,0,0,1), 
+		0px 0px 16px rgba(255,255,255,.6);
+}
+
+
 #reveal h2.large {
-	font-size: 400px;
+	font-size: 100px;
 	margin: 0; padding: 0;
 	line-height: 1;
+	bottom:0;
+	text-shadow: 
+		1px 1px 0px rgba(255,255,255,1), 
+		-1px -1px 0px rgba(0,0,0,1), 
+		0px 0px 16px rgba(255,255,255,.6);
 }
 
 #reveal .large sup {
@@ -102,11 +166,11 @@ html {
 #reveal .slides section .fragment {
 	opacity: 0;
 
-	-webkit-transition: all .2s ease;
-	   -moz-transition: all .2s ease;
-	    -ms-transition: all .2s ease;
-	     -o-transition: all .2s ease;
-	        transition: all .2s ease;
+	-webkit-transition: all .1s ease;
+	   -moz-transition: all .1s ease;
+	    -ms-transition: all .1s ease;
+	     -o-transition: all .1s ease;
+	        transition: all .1s ease;
 }
 	#reveal .slides section .fragment.visible {
 		opacity: 1;
@@ -188,7 +252,7 @@ html {
 }
 
 #reveal code {
-	font-family: monospace;
+	font-family: 'Menlo', 'Vera Sans', monospace;
 }
 
 #reveal small {
@@ -208,7 +272,7 @@ html {
 	}
 
 #reveal a:not(.image) {
-	color: hsl(185, 85%, 50%);
+/*	color: hsl(185, 85%, 50%); */
 	text-decoration: none;
 
 	-webkit-transition: all .2s ease;
@@ -219,9 +283,10 @@ html {
 }
 	
 	#reveal a:not(.image):hover {
-		color: hsl(185, 85%, 70%);
-		background: hsla(185, 25%, 20%, 0.4);
-		text-shadow: none;
+/*		color: hsl(185, 85%, 70%); */
+		background: hsla(185, 25%, 20%, 0.1);
+/*		text-shadow: none; */
+		text-decoration: none;
 		border: none;
 		border-radius: 2px;
 	}
@@ -253,46 +318,59 @@ html {
 #reveal .controls {
 	display: none;
 	position: fixed;
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 40px;
 
 	right: 0;
 	bottom: 0;
+	background: rgba(255, 255, 255, .2);
+	box-shadow: 0px 8px 8px rgba(0,0,0,0.2), inset 2px 2px 3px rgba(0,0,0,0.05);
+	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, .2);
+	margin-bottom: 20px;
+	margin-right: 20px;
 }
 	
 	#reveal .controls a {
 		font-size: 30px;
+		font-weight: 700;
 		position: absolute;
-		opacity: 0.1;
+		opacity: 1;
 		color: #fff;
+		cursor: pointer;
 	}
+	
+		#reveal .controls a.enabled:hover {
+			background: transparent;
+		}
+		
 		#reveal .controls a.enabled {
-			opacity: 0.6;
+			opacity: 1;
 			color: hsl(185, 85%, 70%);
 
-			text-shadow: 0px 0px 2px hsla(185, 45%, 70%, 0.3);
 		}
+
 		#reveal .controls a.enabled:active {
-			margin-top: 1px;
+			margin-top: 3px;
+			text-shadow: 0px 0px 8px white;
 		}
 
 	#reveal .controls .left {
-		top: 30px;
+		top: 6px;
+		left: 8px;
 	}
 
 	#reveal .controls .right {
-		left: 60px;
-		top: 30px;
+		top: 5px;
+		left: 45px;
 	}
 
 	#reveal .controls .up {
-		left: 30px;
+		display: none;
 	}
 
 	#reveal .controls .down {
-		left: 30px;
-		top: 60px;
-
+		display: none;
 	}
 
 
@@ -327,7 +405,7 @@ html {
 /*********************************************
  * ROLLING LINKS
  *********************************************/
-
+/*
 #reveal .roll {
     display: inline-block;
     overflow: hidden;
@@ -343,6 +421,7 @@ html {
        -moz-perspective-origin: 50% 50%;
         -ms-perspective-origin: 50% 50%;
             perspective-origin: 50% 50%;
+
 }
 	#reveal .roll:hover {
 		background: none;
@@ -369,15 +448,19 @@ html {
        -moz-transform-style: preserve-3d;
         -ms-transform-style: preserve-3d;
             transform-style: preserve-3d;
+
 }
     #reveal .roll:hover span {
-        background: rgba(0,0,0,0.5);
+        background: rgba(0,0,0,0.1);
 
         -webkit-transform: translate3d( 0px, 0px, -45px ) rotateX( 90deg );
            -moz-transform: translate3d( 0px, 0px, -45px ) rotateX( 90deg );
             -ms-transform: translate3d( 0px, 0px, -45px ) rotateX( 90deg );
                 transform: translate3d( 0px, 0px, -45px ) rotateX( 90deg );
+
     }
+
+
 #reveal .roll span:after {
     content: attr(data-title);
 
@@ -400,7 +483,7 @@ html {
         -ms-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
             transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
 }
-
+*/
 
 /*********************************************
  * SLIDES
@@ -450,11 +533,11 @@ html {
 	    -ms-transform-style: preserve-3d;
 	        transform-style: preserve-3d;
 	
-	-webkit-transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
-	   -moz-transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
-	    -ms-transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
-	     -o-transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
-	        transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+	-webkit-transition: all 600ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+	   -moz-transition: all 600ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+	    -ms-transition: all 600ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+	     -o-transition: all 600ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+	        transition: all 600ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
 }
 
 #reveal .slides>section.present {
@@ -828,6 +911,27 @@ html {
 	border-color: #5de048;
 }
 
+/*********************************************
+ * ADOBE THEME
+ *********************************************/
+
+#reveal.adobe a {
+	color: #444;
+}
+#reveal.adobe a:hover,
+#reveal.adobe .controls a.enabled {
+	color: #D52217;
+}
+
+#reveal.adobe .progress span,
+#reveal.adobe .roll span:after {
+	background: #D52217;
+}
+
+#reveal.adobe a.image:hover img {
+	border-color: #D52217;
+}
+
 
 /*********************************************
  * OVERVIEW
@@ -906,17 +1010,52 @@ html {
 .second-page .state-background {
 	opacity: 0;
 }
-.home-page .state-background {
-	background: url(../assets/home-slide.png) #000 center center no-repeat;
+
+.tim-berners-lee .state-background {
+	background: url(../assets/tim-berners-lee.jpg) #000 center center no-repeat;
 	background-size: cover;
 	opacity: 1;
 }
 
-.betterweb-page .state-background {
-	background: url(../assets/better-tools.svg) center center no-repeat;
-	background-size: cover;
+
+.home-page .state-background {
+	background: url(../assets/sunset.jpg) #000 center center no-repeat;
+	background-position: 0%, 0%;
+	-webkit-animation-name: pan-around;
+	-webkit-animation-duration: 180s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+/*	background-size: cover; */
 	opacity: 1;
 }
+
+@-webkit-keyframes pan-around {
+	0% {
+		background-position: 10%, 0%;
+	}
+	
+	50% {
+		background-position: 80%, 0%;
+	}
+	
+	100% {
+		background-position: 0%, 0%;
+	}
+}
+
+.betterweb-page .state-background {
+	background:  url(../assets/starburst.png) center center no-repeat;
+	background-size: cover;
+	opacity: .5;
+}
+
+.starbust-page .state-background {
+	background:  url(../assets/starburst.png) center center no-repeat;
+	background-size: cover;
+	opacity: .5;
+}
+
+
 /*
 	CUSTOM STYLES
 */
@@ -924,9 +1063,9 @@ html {
 #adobelogo {
 	position: absolute;
 	top: 0;
-	left: 20px;
-	height: 100px;
-	z-index: 2;
+	left: 40px;
+	height: 80px;
+	z-index: 3;
 	-webkit-transition: opacity 1s ease;
 	   -moz-transition: opacity 1s ease;
 	    -ms-transition: opacity 1s ease;
@@ -937,10 +1076,34 @@ html {
 	opacity: 0;
 }
 
+#vignette {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width:100%;
+	z-index: 1;
+	opacity: .2;
+	-webkit-transition: opacity 1s ease;
+	   -moz-transition: opacity 1s ease;
+	    -ms-transition: opacity 1s ease;
+	     -o-transition: opacity 1s ease;		
+}
+
+.no-vignette #vignette {
+	opacity: 0;
+}
+
+.adobe-logotype {
+	font-family: 'Myriad Pro', 'Myriad Web Pro', 'Myriad', sans-serif;
+	letter-spacing: -.07em;
+}
 
 .amp {
-	font-family: 'Myriad Pro', sans-serif;
+	font-family: 'Myriad Pro', 'Myriad Web Pro', 'Myriad', sans-serif;
 	color: #D52217;
+	font-size: 2em;
+	line-height: 1.05em;
 }
 
 #reveal .home h1,
@@ -950,29 +1113,74 @@ html {
 	text-shadow: 0 0 5px #000;
 }
 
-.adobe-list ul,
-.adobe-list li {
+
+#reveal .adobe-list ul,
+#reveal .adobe-list li {
 	list-style: none;	
 	margin: 0; padding: 0;
 }
 
-.adobe-list {
+#reveal .adobe-list {
 	text-align: left;
 }
+
+#reveal .adobe-list img {
+}
+
+#reveal .adobe-list .flex-list {
+	display: -webkit-box;
+	display: box;
+	-webkit-box-orient: vertical;
+	height: 100%;
+}
+
+#reveal .adobe-list .flex-list > li {
+	display: block;
+}
+
+#reveal .adobe-list .flex-list > li.spring {
+	-webkit-box-flex: 1;
+	box-flex: 1;
+}
+
+#reveal  .dropshadow {
+	box-shadow: 0px 0px 15px rgba(0,0,0,1);	
+}
+
+#reveal  .photoframe {
+	border: 8px solid white;
+	box-shadow: 0px 0px 15px rgba(0,0,0,.8);	
+}
+
 
 #reveal .adobe-list h1 {
 	position: absolute;
 	top: 50%;
-	margin-top: -100px;
+	margin-top: -160px;
 }
 
-.adobe-list ul {
+#reveal .adobe-list img {
+	position: absolute;
+	top: 50%;
+	margin-top: -160px;
+}
+
+
+#reveal .adobe-list ul {
 	position: absolute;
 	right: 0; top: 0;
-	font-size: 1em;
-	line-height: 2em;
+	left:40%;
+	padding-left: 1em;
+	font-size: 1.5em;
+	line-height: .9em;
 	font-weight: 100;
 	color: #444;
+}
+
+#reveal .adobe-list ul li {
+	
+	padding-bottom:.6em;
+	
 }
 
 #reveal .regions img {
@@ -1000,3 +1208,29 @@ html {
 	font-size: 130px;
 	line-height: 1.2em;
 }
+
+#reveal .home.present h3 {
+	position: absolute;
+	width: 100%;
+	bottom: 0.5em;
+}
+
+#reveal .home.present h3 > span{
+	display: block;
+	font-size: 0.6em;
+	font-weight: normal;
+}
+
+#reveal #tools-and-services ul li {
+}
+
+#reveal #tools-and-services ul li img {
+	vertical-align: -25%;
+	margin-right: 0.5em;
+}
+
+/* Override text selection color to something more... subtle */
+
+::-moz-selection{ background: #006EC8; color:#fff; text-shadow: none; }
+::selection { background:#006EC8; color:#fff; text-shadow: none; }
+
