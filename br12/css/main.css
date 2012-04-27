@@ -1110,7 +1110,7 @@ html {
 #reveal .home h2,
 #reveal .home h4 {
 	color: #fff;
-	text-shadow: 0 0 5px #000;
+	text-shadow: 0 0 12px #000;
 }
 
 
@@ -1213,6 +1213,8 @@ html {
 	position: absolute;
 	width: 100%;
 	bottom: 0.5em;
+	text-shadow: 0 0 6px #000;
+	letter-spacing: -.04em;
 }
 
 #reveal .home.present h3 > span{
