@@ -1,0 +1,425 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>Adobe &amp; HTML</title>
+
+		<meta name="description" content="The future of the web - A talk by Arno Gourdol. Senior Director, Web Platform &amp; Authoring">
+		<meta name="author" content="Arno Gourdol">
+
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:500,300,700,400' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+
+		<link rel="stylesheet" href="lib/zenburn.css">
+	</head>
+	
+	<body>
+
+
+		<header>
+<!--			<img id="vignette" src="assets/vignette.png"> -->
+			<img id="adobelogo" src="assets/adobe-vector.svg" alt="adobe">
+		</header>
+
+
+		<div id="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-state="home-page" class="home">
+						<h1>The future<br> of the web</h1>
+						<h3 class="inverted"><b>Arno</b> Gourdol
+						<span>Senior Director, Web Platform &amp; Authoring</span></h3>				
+						<div><script>
+							// Deliciously hacky. Look away.
+							if (navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)) {
+                                document.write('<p style="color: rgba(255,255,255,0.6); text-shadow: none; font-size:.5em; font-weight:bold; letter-spacing:0; background: rgba(255, 255, 255, .2); box-shadow: 0px 8px 8px rgba(0,0,0,0.2), inset 2px 2px 3px rgba(0,0,0,0.05); border-radius: 8px; border: 1px solid rgba(255, 255, 255, .2); margin-left:-8px; margin-right:-8px;"> TAP TO NAVIGATE <\/p>');
+                            }
+						</script></div>
+				</section>
+
+
+<!-- 				
+				<section data-state="second-page" >
+					<h1 class="large"><svg
+							 width="200px" height="200px" viewBox="0 0 400 400" style="position:absolute; top:-50px; left:50px">
+						<defs><linearGradient id="darkbg" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#444; stop-opacity:1" /><stop offset="100%" style="stop-color:#555; stop-opacity:1" /></linearGradient></defs>
+						<path fill="url(#darkbg)" stroke="#000" stroke-width="4" stroke-opacity=".5" 	 d="M0.5,262.094c0,0,52.172,79.049,158.323,77.241c68.433-2.031,165.549-32.296,191.523-132.123
+c0,0,27.893,4.742,47.654-16.939c-26.99,3.727-44.944-4.743-44.944-4.743s35.346-1.017,43.137-21.908						c-20.89,9.035-46.751,1.355-46.751,1.355S337.245,90.22,262.939,87.51c0,0,39.713-8.093,33.502-17.24						c-4.968-6.663-32.597,5.722-32.597,5.722s15.396-6.776,15.057-14.003c-15.584,1.806-29.888,13.325-29.888,13.325						s4.365-7.001,4.44-9.937c-37.114,20.628-62.334,97.455-62.334,97.455s-9.411-10.427-25.07-21.72						C128.257,118.829,58.544,92.479,58.544,92.479s-4.668,28.759,32.522,49.838c-15.207,1.205-22.886,3.162-22.886,3.162						s0,30.565,44.342,40.503c-20.552,0.752-27.328,10.991-27.328,10.991s11.594,27.253,48.031,24.995						c-29.662,15.357-10.389,36.286,13.852,34.027C69.083,325.859,0.5,262.094,0.5,262.094z"/>
+					</svg>
+					<a href="http://twitter.com/arnog">@arnog</a></h1>
+				</section>
+
+
+
+				<section>
+					<h1 class="large"><a href="http://arno.org/br12">arno.org/br12</a></h1>
+				</section>
+
+				<section>
+					<div class="vertical-center"><h1 class="large">#br12</h1></div>
+				</section>
+
+
+				<section class="two-col">
+					<div class="left-col">
+						<img src="assets/blue-beanie.png" height=400>
+					</div>
+					<div class="right-col">
+						<ul style="">
+							<li ><a href="http://twitter.com/arnog">@arnog</a></li>
+							<li ><a href="http://arno.org/br12">arno.org/br12</a></li>
+							<li >#br12</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="adobe-list">
+					<img src="assets/blue-beanie.png" height=600 style="margin-top:-300px">
+					<ul style="margin-left:100px">
+						<li class='fragment'><a href="http://twitter.com/arnog">@arnog</a></li>
+						<li class='fragment'><a href="http://arno.org/br12">arno.org/br12</a></li>
+						<li class='fragment'>#br12</li>
+					</ul>
+				</section>
+
+-->
+
+
+				<section data-state="tim-berners-lee">
+					<h3 class='fragment' style="position:absolute;bottom:0%; background: rgba(0, 0, 0, .4); box-shadow: 0px 8px 8px rgba(0,0,0,0.2), inset 2px 2px 3px rgba(0,0,0,0.05); border-radius: 8px; border: 1px solid rgba(255, 255, 255, .2); margin-left:-8px; margin-right:-8px; color: white; text-shadow: 0 0 5px #000; font-weight:bold">“The web as I envisaged it, we have not seen yet.<br>The future is still so much bigger than the past.”<br><span style="font-size:0.5em; font-weight:100">—Tim Berners-Lee</span></h3>
+				</section>
+
+				<section class="adobe-list">
+					<img src="assets/web.png" height=384 style="margin-top:-192px">
+					<ul class="flex-list">
+						<li class="spring"></li>
+						<li class='fragment'>Ubiquity</li>
+						<li class='fragment'>Easy to learn</li>
+						<li class='fragment'>Large community</li>
+						<li class='fragment'>Designer friendly</li>
+						<li class="spring"></li>
+					</ul>
+				</section>
+
+
+				<section data-state="starbust-page">
+					<h1 class="large">Champion<br>Contribute<br>Create</h1>
+				</section>
+
+				<section data-state="starbust-page">
+					<h1 class="large">Champion</h1>
+				</section>
+
+                
+				<section class="adobe-list">
+					<h1><span class="adobe-logotype" style="font-family:'MyriadPro-Cond'">Adobe</span> <br><b class="amp">&amp;</b></h1>
+					<ul >
+						<li >typography</li>
+						<li >layout</li>
+						<li >illustration</li>
+						<li >graphics</li>
+						<li >digital imaging</li>
+						<li >rich internet apps</li>
+						<li >animation</li>
+						<li >video</li>
+					</ul>
+				</section>
+
+				<section class="regions">
+					<img src="assets/regions.png">
+					<h2 class="embossed">CSS Regions</h2>
+					<h3>magazine-line layout for the web</h3>
+				</section>
+
+				<section>
+					<img src="assets/exclusions.png">
+				</section>
+
+                
+				<section>
+					<img src="assets/arches-landscape.png">
+				</section>
+
+                
+				<section>
+					<img src="assets/arches-portrait.png">
+				</section>
+
+                
+				<section>
+					<img src="assets/arches-landscape.png" height=400>
+					<img src="assets/arches-portrait.png" height=400>
+				</section>
+
+                
+				<section class="regions">
+					<img src="assets/flipbook.png">
+					<h2  class="embossed">CSS Shaders</h2>
+					<h3>cinematic visual effects for HTML</h3>
+				</section>
+
+				<section>
+					<img class="dropshadow" src="assets/shaders-article.jpg" style="margin-top:-100px">
+				</section>
+
+
+				<section>
+					<h1 class="large"><a href="http://dev.w3.org/csswg/css-variables/">CSS Variables</a><span style="display:block; font-size:0.5em; letter-spacing:0; font-weight:100">built-in LESS/SASS</span></h1>
+				</section>
+
+				<section>
+					<h1 class="large"><a href="http://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/">Shadow DOM</a><span style="display:block; font-size:0.5em; letter-spacing:0; font-weight:100">software components with web standards</span></h1>
+				</section>
+
+
+				<section data-state="starbust-page">
+					<h1 class="large">Contribute</h1>
+				</section>
+
+				<section>
+					<img src="assets/webkit.png" height=300>
+					<img src="assets/phonegap.png" height=300>
+					<img src="assets/jquery.png" height=100>
+				</section>
+
+				<section>
+					<img src="assets/webkit.png">
+					<h2 class="embossed">WebKit</h2>
+				</section>
+
+				<section>
+					<img src="assets/phonegap.png">
+					<h2 class="embossed">Apache Cordova</h2>
+				</section>
+
+				<section>
+					<img src="assets/jquery.png" style="margin-top:200px">
+<!-- 					<h2 class="embossed">jQuery Mobile</h2> -->
+				</section>
+
+				
+
+				<section data-state="starbust-page">
+					<h1 class="large">Create</h1>
+				</section>
+
+				<section>
+					<center>
+					<table >
+							<tr><td colspan=2 align=center><h1 class="embossed">Modern</h1></td></tr>
+							<tr >
+								<td><img class="photoframe" src="assets/modern-designer.jpg" height=150 style="-webkit-transform:rotate(-5deg); margin-bottom:24px"></td>
+								<td><img class="photoframe" src="assets/modern-developer.jpg" height=150 style="-webkit-transform:rotate(3deg); margin-bottom:24px"></td>
+								
+							</tr>
+							<tr style="font-size:24px; line-height:1em">
+								<td valign=top width=450><strong>“Modern” Web Designer</strong><br>
+								Fluent in current design tools, such as Photoshop and Illustrator. Capable of understanding and manipulating HTML and CSS.</td>
+								<td valign=top align=left width=450><strong>“Modern” Web Developer</strong><br>
+								Commonly writes with HTML, CSS and JavaScript to create front end web sites and applications. 
+								</td>
+							</tr>
+						
+					</table>
+					</center>
+					
+					
+				</section>
+
+				<section class="adobe-list">
+					<img src="assets/piechart1.png" align=left style="margin-top:-350px">
+					<ul style="font-size:32px; margin-left:150px">
+						<li><b>38%:</b> “It is increasingly important to learn and write JavaScript or equivalent code”</li>
+						<li><b>30%:</b> “I am waiting for tools from Adobe and others to simplify development for designers”</li>
+						<li><b>11%:</b> “I am sticking to being a designer and leave coding to the developers”</li>
+						<li><b>11%:</b> n/a</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<img class="dropshadow" src="assets/quote-1.png">
+					<img class="dropshadow" src="assets/quote-2.png">
+				</section>
+
+				<section>
+					<img class="dropshadow" src="assets/dribble.jpg" height=512 style="-webkit-transform:rotate(1.2deg)">
+					<h2><a href="http://dribble.com">dribble.com</a></h2>
+				</section>
+
+				<section>
+					<img class="dropshadow" src="assets/nerdi.jpg" height=512 style="-webkit-transform:rotate(-.8deg)">
+					<h2><a href="http://nerdi.com">nerdi.com</a></h2>
+				</section>
+
+				<section>
+					<img class="dropshadow" src="assets/dabblet.jpg" height=512 style="-webkit-transform:rotate(.8deg)">
+					<h2><a href="http://dabblet.com">dabblet.com</a></h2>
+				</section>
+
+				<section id="tools-and-services">
+						<h1 >Tools & Services</h1>
+						<ul style="-webkit-column-count:2; width:100%">
+							<li><img src="assets/proto-icon.png" height=64 style="">Proto</li>
+							<li><img src="assets/ideas-icon.png" height=64 style="">Ideas</li>
+							<li><img src="assets/fireworks-icon.png" height=64 style="">Fireworks</li>
+							<li><img src="assets/browserlabs-icon.png" height=64 style="">Browserlabs</li>
+							<li><img src="assets/bc-icon.png" height=64 style="">Business Catalyst</li>
+							<li><img src="assets/typekit-icon.png" height=64 style=""></li>
+							<li><img src="assets/dreamweaver-icon.png" height=64 style="">Dreamweaver</li>
+							<li><img src="assets/shadow-icon.png" height=64 style="">Shadow</li>
+							<li><img src="assets/edge-icon.png" height=64 style="">Edge</li>
+							<li><img src="assets/phonegap.png" height=64 style=""></li>
+						</ul>
+				</section>
+
+				<section class="adobe-list">
+					<img src="assets/dreamweaver-icon.png" height=256>
+					<ul>
+						<li class='fragment'>Fluid grid layouts</li>
+						<li class='fragment'>CSS transitions</li>
+						<li class='fragment'>PhoneGap Build</li>
+						<li class='fragment'>Business Catalyst</li>
+						<li class='fragment'>jQuery Mobile swatches</li>
+						<li class='fragment'>Faster FTP</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="assets/edge-icon.png">
+				</section>
+
+				<section>
+					<img src="assets/edge-icon.png" height="384">
+					<h2 class="embossed"><b>Edge</b></h2>
+					<h3>motion and interaction design  for HTML</h3>
+				</section>
+
+				<section>
+					<img src="assets/edge-screenshot.png" style="margin-top:-50px">
+				</section>
+
+
+				<section>
+					<img src="assets/phonegap.png" style="margin-top:-50px">
+					<h3>HTML apps on your mobile device</h3>
+				</section>
+
+				<section>
+					<img src="assets/phonegap1.png" style="margin-top:-50px">
+				</section>
+
+				<section>
+					<img src="assets/phonegap-build1.png" style="margin-top:-50px">
+				</section>
+
+
+				<section class="adobe-list">
+					<img src="assets/shadow-icon.png" height=256>
+					<ul>
+						<li class="fragment">Design with web standards</li>
+						<li class="fragment">Test, preview, debug</li>
+						<li class="fragment">Multiple devices</li>
+						<li class="fragment">Easy setup</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<img src="assets/html.adobe.com.png" height=512 style="-webkit-transform:rotate(-1.2deg)">
+					<h2><a href="http://html.adobe.com" >html.adobe.com</a></h2>
+				</section>
+
+						<!-------------------------------------------------------------- -->
+
+
+
+				<section class="better-web">
+					<section data-state="betterweb-page">
+						<h2>A Better Web</h2>
+						<b class="amp">&amp;</b>
+						<h2>Awesome Tools</h2>					
+					</section>
+				</section>
+
+				<section data-state="no-logo">
+					<img src="assets/adobe-vector.svg" width="357" height="600" >							
+				</section>
+
+				<section class="adobe-list">
+					<h3>Colophon</h3>
+					<ul >
+						<li><b>reveal.js</b> by <a href="http://hakim.se">Hakim El Hattab</a></li>
+						<li><b>Font</b> Ubuntu</li>
+					</ul>
+				</section>
+
+
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#" style="-webkit-transform:rotate(180deg);"><svg  width="25px" height="21px" viewBox="0 0 100 84" xml:space="preserve">
+				<polygon points="58,0 100,42 58,84 31,84 62,52 0,52 0,32 62,32 31,0 58,0 "/>
+				</svg>
+				</a>
+				<a class="right" href="#"><svg  width="25px" height="21px" viewBox="0 0 100 84" xml:space="preserve">
+				<polygon points="58,0 100,42 58,84 31,84 62,52 0,52 0,32 62,32 31,0 58,0 "/>
+				</svg></a>
+				<a class="up" href="#"></a>
+				<a class="down" href="#"></a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+		
+		<script src="js/reveal.js"></script>
+
+		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
+		<script src="lib/highlight.js"></script>
+		<script src="lib/classList.js"></script>
+		
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: !(query.controls === 'false'),
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: false,
+
+				// UI style
+				theme: query.theme || 'adobe', // default/neon
+
+				// Transition style
+				transition: query.transition || 'linear' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+
+	</body>
+</html>
